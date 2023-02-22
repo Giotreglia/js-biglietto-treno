@@ -31,9 +31,9 @@ if (isNaN(distanzaTragitto) || isNaN(etaPasseggero)) {
 } else { 
 
     
-    if (etaPasseggero <= 18) { 
+    if (etaPasseggero < 18) { 
 
-        // Under 18 conto 20%
+        // Under 18 sconto 20%
         
         //Calcolo prezzo scontato
         let prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoMinorenni;
