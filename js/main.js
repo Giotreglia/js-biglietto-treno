@@ -38,7 +38,7 @@ if (isNaN(distanzaTragitto) || isNaN(etaPasseggero)) {
         //Calcolo prezzo scontato
         let prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoMinorenni;
 
-        //Calcolo prezzo no sconto
+        //Calcolo prezzo senza sconto
         let noSconto = (distanzaTragitto * prezzoAlKm);
 
         //Definizione decimali
@@ -63,7 +63,7 @@ if (isNaN(distanzaTragitto) || isNaN(etaPasseggero)) {
         //Calcolo prezzo scontato
         let prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoOver65;
 
-        //Calcolo prezzo no sconto
+        //Calcolo prezzo senza sconto
         let noSconto = (distanzaTragitto * prezzoAlKm);
 
         //Definizione decimali
