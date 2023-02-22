@@ -30,28 +30,68 @@ if (isNaN(distanzaTragitto) || isNaN(etaPasseggero)) {
     document.getElementById("prezzoBiglietto2Decimali").innerHTML = 'Impossibile fare il calcolo, hai inserito qualcosa che non è un numero';
 } else { 
 
-    // Under 18 conto 20%
+    
     if (etaPasseggero <= 18) { 
-        const prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoMinorenni;
+
+        // Under 18 conto 20%
+        
+        //Calcolo prezzo scontato
+        let prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoMinorenni;
+
+        //Calcolo prezzo no sconto
+        let noSconto = (distanzaTragitto * prezzoAlKm);
+
+        //Definizione decimali
         let prezzoBiglietto2Decimali = prezzoBiglietto.toFixed(2);
+        let noSconto2Decimali = noSconto.toFixed(2);
+
+        //Azioni
         document.getElementById("prezzoBiglietto2Decimali").innerHTML = 
         `€ ${prezzoBiglietto2Decimali}`
+
         document.getElementById("sconto").innerHTML =
         `Hai usufruito dello sconto del 20% per under 18!`
+
+        document.getElementById("noSconto2Decimali").innerHTML = 
+        `€ ${noSconto2Decimali}`
     
-    // Over 65 sconto 40%    
-    } else if (etaPasseggero >= 65) { //over65
-        const prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoOver65;
+       
+    } else if (etaPasseggero >= 65) { 
+
+        // Over 65 sconto 40% 
+
+        //Calcolo prezzo scontato
+        let prezzoBiglietto = (distanzaTragitto * prezzoAlKm) * scontoOver65;
+
+        //Calcolo prezzo no sconto
+        let noSconto = (distanzaTragitto * prezzoAlKm);
+
+        //Definizione decimali
         let prezzoBiglietto2Decimali = prezzoBiglietto.toFixed(2);
+        let noSconto2Decimali = noSconto.toFixed(2);
+
+        //Azioni
         document.getElementById("prezzoBiglietto2Decimali").innerHTML = 
         `€ ${prezzoBiglietto2Decimali}`
-        document.getElementById("sconto").innerHTML =
-        `Hai usufruito dello sconto del 20% per over 65!`
 
-    // Tariffa standard    
+        document.getElementById("sconto").innerHTML =
+        `Hai usufruito dello sconto del 40% per over 65!`
+
+        document.getElementById("noSconto2Decimali").innerHTML = 
+        `€ ${noSconto2Decimali}`
+
+        
     } else {
+
+        // Tariffa standard
+
+        //Calcolo prezzo biglietto
         const prezzoBiglietto = (distanzaTragitto * prezzoAlKm);
+
+        //Definizione decimali
         let prezzoBiglietto2Decimali = prezzoBiglietto.toFixed(2); 
+
+        //Azioni
         document.getElementById("prezzoBiglietto2Decimali").innerHTML = "€" + " " + prezzoBiglietto2Decimali;
     }
 }

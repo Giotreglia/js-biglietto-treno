@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109, 109, 109);
+    padding: 30px;
+    height: 100vh;
+}
+
+.card {
+    color: white;
+    width: 60%;
+    height: 350px;
+    padding: 40px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+}
+
+h2 {
+    font-size: 50px;
+    margin: 20px 0;
+    color: rgb(253, 232, 114);
+}
+
+#prezzoBiglietto2Decimali {
+    font-size: 80px;
+    margin: 10px 0;
+    text-align: right;
+}
+
+#sconto {
+    font-size: 20px;
+    text-align: right;
+    color: rgb(255, 244, 183);
+}
+
+#noSconto2Decimali {
+    color: rgb(255, 66, 66);
+    text-decoration: line-through;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
