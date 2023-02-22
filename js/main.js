@@ -27,7 +27,7 @@ const scontoOver65 = 0.6;
 //Calcolo prezzo biglietto con arrotondamento 2 decimali
 
 if (isNaN(distanzaTragitto) || isNaN(etaPasseggero)) {
-    console.log('Impossibile fare il calcolo, hai inserito qualcosa che non è un numero');
+    document.getElementById("prezzoBiglietto2Decimali").innerHTML = 'Impossibile fare il calcolo, hai inserito qualcosa che non è un numero';
 } else { 
 
     // Under 18 conto 20%
